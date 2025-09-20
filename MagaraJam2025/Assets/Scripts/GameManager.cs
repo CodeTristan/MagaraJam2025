@@ -1,18 +1,17 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class LittleGameManager : MonoBehaviour    
 {
-    public static GameManager Instance { get; private set; }
+    public static LittleGameManager Instance { get; private set; }
 
     [SerializeField] private GlobalRoomController globalRoomController;
     [SerializeField] private ClickRaycaster clickRaycaster;
     [SerializeField] private TransitionController transitionController;
-    private void Awake()
+    public void Init()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {

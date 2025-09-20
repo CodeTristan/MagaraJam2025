@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<File xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IDCounter>1</IDCounter>
+  <InnerFiles>
+    <Name>Cluster #1</Name>
+    <File>
+      <FileName>Artist's Room</FileName>
+      <ClusterName>Cluster #1</ClusterName>
+      <IDCounter>2</IDCounter>
+      <BranchCluster>
+        <Name>Cluster #1</Name>
+        <Branch>
+          <Name>Branch #1</Name>
+          <Type>DialogBranch</Type>
+          <ID>0</ID>
+          <IDCounter>1</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>true</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>NONE</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>hey</s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Dead Artist First Time</Name>
+          <Type>DialogBranch</Type>
+          <ID>1</ID>
+          <IDCounter>3</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>I see a dead body.</s>
+              <s>I have a hunch that this guy is dead.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>1</Name>
+            <Type>ChoiceBody</Type>
+            <ID>1</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Stop Inspecting</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>1/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>1</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+                <Instruction xsi:type="Dialog">
+                  <Name />
+                  <Type>Dialog</Type>
+                  <ID>0</ID>
+                  <Expression />
+                  <Animation />
+                  <Voice />
+                  <Sentences>
+                    <s>You Stopped</s>
+                  </Sentences>
+                </Instruction>
+              </Branch>
+            </Choice>
+            <Choice>
+              <ChoiceText>Keep Looking</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>1/1</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>1</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+                <Instruction xsi:type="Dialog">
+                  <Name />
+                  <Type>Dialog</Type>
+                  <ID>0</ID>
+                  <Expression />
+                  <Animation />
+                  <Voice />
+                  <Sentences>
+                    <s>There is nothing else to see.</s>
+                  </Sentences>
+                </Instruction>
+              </Branch>
+            </Choice>
+          </Instruction>
+        </Branch>
+      </BranchCluster>
+    </File>
+  </InnerFiles>
+</File>

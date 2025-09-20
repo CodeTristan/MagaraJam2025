@@ -22,7 +22,9 @@ public class ClickRaycaster : MonoBehaviour
         if (EventSystem.current != null)
         {
             if (Mouse.current != null && EventSystem.current.IsPointerOverGameObject(-1))
+            {
                 return;
+            }
         }
 
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)

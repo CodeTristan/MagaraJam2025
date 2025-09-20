@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class MouseInformationText : MonoBehaviour
@@ -14,8 +15,13 @@ public class MouseInformationText : MonoBehaviour
 
     private void Update()
     {
-        if (Mouse.current != null)
+        if (EventSystem.current != null)
         {
+            if (Mouse.current != null && EventSystem.current.IsPointerOverGameObject(-1))
+            {
+                return;
+            }
+
             mousePos = Mouse.current.position.ReadValue();
             TryRaycast(mousePos);
             ObjectTransform.position = mousePos + Offset;

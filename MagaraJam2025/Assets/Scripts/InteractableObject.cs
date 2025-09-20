@@ -4,6 +4,8 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour, IInteractable
 {
     [SerializeField] private string description;
+    public string FileName;
+    public string BranchName;
     public string GetDescription()
     {
         return description;
@@ -12,5 +14,6 @@ public class InteractableObject : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         Debug.Log($"Interacted with {gameObject.name}");
+        DialogManager.instance.StartBranch(FileName, BranchName);
     }
 }
