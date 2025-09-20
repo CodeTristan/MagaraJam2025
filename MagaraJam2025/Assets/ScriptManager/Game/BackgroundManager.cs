@@ -22,8 +22,6 @@ public class BackgroundManager : MonoBehaviour
     [SerializeField] private Canvas backgroundCanvas;
     [SerializeField] private Animator generalCanvasAnimator;
 
-    public TextMeshProUGUI Action_Point_Text;
-
     [Header("Background Sprites")]
     public Background currentBackground;
     [SerializeField] private Background[] backgrounds;
@@ -38,8 +36,6 @@ public class BackgroundManager : MonoBehaviour
     {
         instance = this;
         soundEffects = new List<SoundEffect>();
-        //currentPlace = GameManager.instance.allPlaces.GetPlaceByName(PlaceName.Home);
-        //currentBackground = GetBackgroundByName(BackgroundName.Your_House);
         ToggleGeneralCanvas(true);
         CloseAllBackgrounds();
 
@@ -308,6 +304,7 @@ public class BackgroundManager : MonoBehaviour
         CloseAllBackgrounds();
         bg.backgroundObject.SetActive(true);
         CheckBackgroundCharacters(bg);
+
 
     }
 

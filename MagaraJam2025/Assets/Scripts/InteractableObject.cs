@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
@@ -6,6 +7,8 @@ public class InteractableObject : MonoBehaviour, IInteractable
     [SerializeField] private string description;
     public string FileName;
     public string BranchName;
+
+    public List<Dialog> dialogs;
     public string GetDescription()
     {
         return description;
@@ -14,6 +17,13 @@ public class InteractableObject : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         Debug.Log($"Interacted with {gameObject.name}");
-        DialogManager.instance.StartBranch(FileName, BranchName);
+        if(FileName != "" && BranchName != "")
+            DialogManager.instance.StartBranch(FileName, BranchName);
+        else
+        {
+            DialogBranch branch = new DialogBranch();
+            branch.instructions.AddRange(dialogs);
+            DialogManager.instance.StartBranch(branch);
+        }
     }
 }
