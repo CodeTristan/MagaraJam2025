@@ -1,60 +1,99 @@
-using TMPro;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class MouseInformationText : MonoBehaviour
 {
-
     [SerializeField] RectTransform ObjectTransform;
     [SerializeField] TextMeshProUGUI ObjectText;
     [SerializeField] Vector2 Offset;
-
 
     private Vector2 mousePos = Vector2.zero;
 
     private void Update()
     {
-        if (EventSystem.current != null)
-        {
-            if (Mouse.current != null && EventSystem.current.IsPointerOverGameObject(-1))
-            {
-                return;
-            }
+        if (Mouse.current == null) return;
 
-            mousePos = Mouse.current.position.ReadValue();
-            TryRaycast(mousePos);
-            ObjectTransform.position = mousePos + Offset;
-        }
+        mousePos = Mouse.current.position.ReadValue();
+        TryRaycast(mousePos);
+
+        // Tooltip’in mouse’u takip etmesi
+        ObjectTransform.position = mousePos + Offset;
+
+        if(DialogManager.instance.inDialog)
+            ClearMouseObject();
     }
 
     private void TryRaycast(Vector2 screenPos)
     {
-        if (ClickRaycaster.Instance.CurrentCamera == null) return;
+        bool found = false;
 
-        Ray ray = ClickRaycaster.Instance.CurrentCamera.ScreenPointToRay(screenPos);
-        if (Physics.Raycast(ray, out RaycastHit hit, ClickRaycaster.Instance.maxRayDistance, ClickRaycaster.Instance.interactableLayerMask, QueryTriggerInteraction.Ignore))
+        // --- 1) UI Raycast ---
+        if (EventSystem.current != null)
         {
-            if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
-                SetMouseObject(screenPos, interactable.GetDescription());
-            else
+            var ped = new PointerEventData(EventSystem.current) { position = screenPos };
+            var results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(ped, results);
+
+            //foreach (var r in results)
+            //{
+            //    if (r.gameObject.TryGetComponent<IInteractable>(out var uiInteractable))
+            //    {
+            //        SetMouseObject(screenPos, uiInteractable.GetDescription());
+            //        found = true;
+            //        break;
+            //    }
+            //}
+            if(results.Count > 0)
             {
-                var parent = hit.collider.GetComponentInParent<IInteractable>();
-                if (parent != null) SetMouseObject(screenPos, parent.GetDescription());
-                else ClearMouseObject();
+                if (results[0].gameObject.TryGetComponent<IInteractable>(out var uiInteractable))
+                {
+                    SetMouseObject(screenPos, uiInteractable.GetDescription());
+                }
+                else
+                {
+                    ClearMouseObject();
+                }
+                    found = true; // UI elementlerine týklandýysa 3D’ye geçme
             }
         }
-        else
+
+        // --- 2) Eðer UI’de bulamazsak, 3D Physics Raycast ---
+        if (!found && ClickRaycaster.Instance.CurrentCamera != null)
         {
-            ClearMouseObject();
+            Ray ray = ClickRaycaster.Instance.CurrentCamera.ScreenPointToRay(screenPos);
+            if (Physics.Raycast(ray, out RaycastHit hit,
+                ClickRaycaster.Instance.maxRayDistance,
+                ClickRaycaster.Instance.interactableLayerMask,
+                QueryTriggerInteraction.Ignore))
+            {
+                if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
+                {
+                    SetMouseObject(screenPos, interactable.GetDescription());
+                    found = true;
+                }
+                else
+                {
+                    var parent = hit.collider.GetComponentInParent<IInteractable>();
+                    if (parent != null)
+                    {
+                        SetMouseObject(screenPos, parent.GetDescription());
+                        found = true;
+                    }
+                }
+            }
         }
+
+        if (!found)
+            ClearMouseObject();
     }
 
-    public void SetMouseObject(Vector2 position,string text)
+    public void SetMouseObject(Vector2 position, string text)
     {
         ObjectTransform.gameObject.SetActive(true);
         ObjectText.gameObject.SetActive(true);
-
         ObjectText.text = text;
     }
 

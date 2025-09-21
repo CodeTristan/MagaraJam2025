@@ -66,6 +66,8 @@ public class PlaceSaveData
 public enum PlaceName
 {
     Null,
+    Gallery,
+    Artist_Room
 }
 
 [System.Serializable]

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4f9e14da945d24b918f9b60c70eec6, type: 3}
   m_Name: ALLPlaces
   m_EditorClassIdentifier: Assembly-CSharp::AllPlacesSO
-  places: []
+  places:
+  - {fileID: 11400000, guid: 635a36333f1225d4193e364c1b416453, type: 2}

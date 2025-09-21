@@ -7,6 +7,7 @@ public class LittleGameManager : MonoBehaviour
     [SerializeField] private GlobalRoomController globalRoomController;
     [SerializeField] private ClickRaycaster clickRaycaster;
     [SerializeField] private TransitionController transitionController;
+    [SerializeField] private NotebookController notebookController;
     public void Init()
     {
         if (Instance == null)
@@ -21,5 +22,6 @@ public class LittleGameManager : MonoBehaviour
         transitionController.Init();
         clickRaycaster.Init();
         globalRoomController.Init();
+        notebookController.Init();
     }
 }

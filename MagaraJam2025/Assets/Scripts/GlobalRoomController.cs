@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum RoomName
 {
@@ -12,6 +14,7 @@ public class GlobalRoomController : MonoBehaviour
 
     [SerializeField] private RoomController[] roomControllers;
 
+    [SerializeField] private Button ChangeRoomButton;
     [SerializeField] private RectTransform RoomCameraContent;
     [SerializeField] private CameraButton[] RoomCameraButtons;
 
@@ -32,6 +35,8 @@ public class GlobalRoomController : MonoBehaviour
         }
 
         OpenRoom(RoomName.ArtistRoom);
+        ChangeRoomButton.onClick.RemoveAllListeners();
+        ChangeRoomButton.onClick.AddListener(() => ChangeRoom());
     }
 
     public void OpenRoom(RoomName roomName)
@@ -58,6 +63,27 @@ public class GlobalRoomController : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void ChangeRoom()
+    {
+        if(currentRoom.roomName == RoomName.ArtistRoom)
+        {
+            OpenRoom(RoomName.GalleryRoom);
+            ChangeRoomButton.GetComponentInChildren<TextMeshProUGUI>().text = "Odaya Git";
+        }
+        else if(currentRoom.roomName == RoomName.GalleryRoom)
+        {
+            OpenRoom(RoomName.ArtistRoom);
+            ChangeRoomButton.GetComponentInChildren<TextMeshProUGUI>().text = "Galeriye Git";
+
+        }
+    }
+
+
+    public RoomController GetCurrentRoom()
+    {
+        return currentRoom;
     }
 
     public void CloseAllCameraButtons()

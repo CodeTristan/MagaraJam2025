@@ -336,23 +336,27 @@ public class DialogManager : MonoBehaviour
                     currentManagerVariables.instructionIndex++;
                     BackgroundInstruction ins = (BackgroundInstruction)instructions[instructionIndex];
                     if (ins.checkDialogs)
-                        BackgroundManager.instance.ChangeBackground(GameManager.instance.allPlaces.GetPlaceByName(GameManager.instance.allPlaces.GetPlaceNameEnum(ins.name)), true, true, true);
+                        GlobalRoomController.Instance.OpenRoom(RoomName.ArtistRoom);
                     else
                         BackgroundManager.instance.ChangeBackground(ins.name);
+
+                    StartNextInstruction();
                     return;  //Change Bg
                 }
             case InstructionType.Music:
                 {
-                    MusicManager.instance.PlayMusic(instructions[instructionIndex].name);
+                    MusicManager.instance.PlaySound(instructions[instructionIndex].name);
                     currentManagerVariables.instructionIndex++;
                     StartNextInstruction();
                     return;
                 }//Change Music
             case InstructionType.Minigame:
                 {
-                    InputManager.instance.DisableAllControls();
-                    LoadMinigame(instructions[instructionIndex].name);
-                    break;
+                    bool success = NotebookController.Instance.AddClue(instructions[instructionIndex].name);
+                    currentManagerVariables.instructionIndex++;
+                    if (!success)
+                        StartNextInstruction();
+                    return;
                 } //Change scene to minigame
             case InstructionType.Dialog:
                 {

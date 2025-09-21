@@ -6,14 +6,14 @@
     <File>
       <FileName>Artist's Room</FileName>
       <ClusterName>Cluster #1</ClusterName>
-      <IDCounter>2</IDCounter>
+      <IDCounter>12</IDCounter>
       <BranchCluster>
         <Name>Cluster #1</Name>
         <Branch>
-          <Name>Branch #1</Name>
+          <Name>Start</Name>
           <Type>DialogBranch</Type>
           <ID>0</ID>
-          <IDCounter>1</IDCounter>
+          <IDCounter>14</IDCounter>
           <ClusterName>Cluster #1</ClusterName>
           <IsStartBranch>true</IsStartBranch>
           <Instruction xsi:type="Dialog">
@@ -24,15 +24,128 @@
             <Animation />
             <Voice />
             <Sentences>
-              <s>hey</s>
+              <s>Yolda ağır adımlarla yürümekteyken, aniden bir kadının feryadını işitirsin.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Miscellaneous">
+            <Name>Woman Scream</Name>
+            <Type>Music</Type>
+            <ID>2</ID>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Kadın</Name>
+            <Type>Dialog</Type>
+            <ID>1</ID>
+            <Expression>NoSprite</Expression>
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>AHHHHHH!</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>NONE</Name>
+            <Type>Dialog</Type>
+            <ID>3</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Feryadın geldiği binaya aceleyle dalarsın; kapısında ‘Collingwood Sanat Galerisi’ yazılıdır.</s>
+              <s>Galerinin içine girer, feryadın geldiği yöne ilerlersin; orada bir kadın görürsün.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="BackgroundInstruction">
+            <Name>Artist's Room</Name>
+            <Type>Background</Type>
+            <ID>5</ID>
+            <CheckDialogs>true</CheckDialogs>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Kadın</Name>
+            <Type>Dialog</Type>
+            <ID>6</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Bay… Bay Martin…</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Galeri Sahibi</Name>
+            <Type>Dialog</Type>
+            <ID>7</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Neler oldu burada?..</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Adam</Name>
+            <Type>Dialog</Type>
+            <ID>8</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>KARDEŞİM!</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>9</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Herkes geri çekilsin! Ben sertifikalı bir dedektifim, adım Şirlok Hom. Burası artık bir suç mahallidir. </s>
+              <s>Herkes galeride kalacak; muhafızlar, hiç kimseyi içeri almayın ve kimsenin çıkmasına müsaade etmeyin.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Galeri Sahibi</Name>
+            <Type>Dialog</Type>
+            <ID>10</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Ne büyük tesadüf ki, böylesi bir felaket yaşanırken, büyük Şirlok Hom buralardaymış…</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>11</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Evet. Ve şimdi, müsaadenizle...</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>NONE</Name>
+            <Type>Dialog</Type>
+            <ID>12</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Artık odada yalnızsın. Cesedi incelemek için üzerine tıklayabilirsin.</s>
+              <s>Cesedi ve etrafı incele ve notlar çıkar.</s>
             </Sentences>
           </Instruction>
         </Branch>
         <Branch>
-          <Name>Dead Artist First Time</Name>
+          <Name>Wound</Name>
           <Type>DialogBranch</Type>
-          <ID>1</ID>
-          <IDCounter>3</IDCounter>
+          <ID>4</ID>
+          <IDCounter>1</IDCounter>
           <ClusterName>Cluster #1</ClusterName>
           <IsStartBranch>false</IsStartBranch>
           <Instruction xsi:type="Dialog">
@@ -43,64 +156,203 @@
             <Animation />
             <Voice />
             <Sentences>
-              <s>I see a dead body.</s>
-              <s>I have a hunch that this guy is dead.</s>
+              <s>Keskin bir aletle açılmış, bıçak yarasına benziyor.</s>
             </Sentences>
           </Instruction>
-          <Instruction xsi:type="ChoiceBody">
-            <Name>1</Name>
-            <Type>ChoiceBody</Type>
+        </Branch>
+        <Branch>
+          <Name>Scraper</Name>
+          <Type>DialogBranch</Type>
+          <ID>5</ID>
+          <IDCounter>1</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Sanatçının elinde kanlı bir kazıyıcı var; cinayet aleti bu olabilir. Yoksa kendi canına mı kıydı?</s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Hand</Name>
+          <Type>DialogBranch</Type>
+          <ID>6</ID>
+          <IDCounter>1</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Parmaklarında nasırlar, elinin arkasında ise küçük bir yara izi görünüyor.</s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Pocket</Name>
+          <Type>DialogBranch</Type>
+          <ID>8</ID>
+          <IDCounter>2</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>NONE</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Sanatçının cebini açarsın; içinde kırık bir saat vardır, 13:45’i göstermekte.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
             <ID>1</ID>
-            <DialogText />
-            <IsLoop>false</IsLoop>
-            <Choice>
-              <ChoiceText>Stop Inspecting</ChoiceText>
-              <IsSelectable>true</IsSelectable>
-              <hasSelected>false</hasSelected>
-              <isSelectable>true</isSelectable>
-              <Branch>
-                <Name>1/0</Name>
-                <Type>DialogBranch</Type>
-                <ID>0</ID>
-                <IDCounter>1</IDCounter>
-                <IsStartBranch>false</IsStartBranch>
-                <Instruction xsi:type="Dialog">
-                  <Name />
-                  <Type>Dialog</Type>
-                  <ID>0</ID>
-                  <Expression />
-                  <Animation />
-                  <Voice />
-                  <Sentences>
-                    <s>You Stopped</s>
-                  </Sentences>
-                </Instruction>
-              </Branch>
-            </Choice>
-            <Choice>
-              <ChoiceText>Keep Looking</ChoiceText>
-              <IsSelectable>true</IsSelectable>
-              <hasSelected>false</hasSelected>
-              <isSelectable>true</isSelectable>
-              <Branch>
-                <Name>1/1</Name>
-                <Type>DialogBranch</Type>
-                <ID>0</ID>
-                <IDCounter>1</IDCounter>
-                <IsStartBranch>false</IsStartBranch>
-                <Instruction xsi:type="Dialog">
-                  <Name />
-                  <Type>Dialog</Type>
-                  <ID>0</ID>
-                  <Expression />
-                  <Animation />
-                  <Voice />
-                  <Sentences>
-                    <s>There is nothing else to see.</s>
-                  </Sentences>
-                </Instruction>
-              </Branch>
-            </Choice>
+            <Expression />
+            <Animation />
+            <Voice>NONE</Voice>
+            <Sentences>
+              <s>Kırık bir saat… Zaman 13:45’i gösteriyor. Şimdi ise saat 15:00.</s>
+              <s>Cesedin durumuna bakacak olursak yaklaşık 1 saat önce ölmüş. Rastlantısal bir durum değil.</s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Unfinished Painting</Name>
+          <Type>DialogBranch</Type>
+          <ID>9</ID>
+          <IDCounter>1</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Görünüşe bakılırsa, aniden öldüğünde resim yapmaktaymış. </s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Black Dyed Painting</Name>
+          <Type>DialogBranch</Type>
+          <ID>10</ID>
+          <IDCounter>1</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Siyah boya lekesi hâlâ yaş; belli ki yeni. Peki, tabloda görülen bu kişi kim?</s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Painting inside Painting</Name>
+          <Type>DialogBranch</Type>
+          <ID>11</ID>
+          <IDCounter>1</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Çizilen resmin arkaplanı oda ile uyuşmakta.</s>
+              <s>O zaman resimdeki kadının arkadasındaki resim, şu an üstü siyahla boyanmış resim olmalı.</s>
+              <s>Resimdeki adam &lt;color=red&gt;Galerinin Sahibi&lt;/color&gt;! Siyah boya çok taze. Neden cinayet mahalinde kendi resmini kapatmak istesin ki?</s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+      </BranchCluster>
+      <BranchCluster>
+        <Name>Kings painting</Name>
+        <Branch>
+          <Name>Clock</Name>
+          <Type>DialogBranch</Type>
+          <ID>2</ID>
+          <IDCounter>2</IDCounter>
+          <ClusterName>Kings painting</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Kral, parşomeni sağ eliyle tutuyor.</s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Parchment</Name>
+          <Type>DialogBranch</Type>
+          <ID>3</ID>
+          <IDCounter>2</IDCounter>
+          <ClusterName>Kings painting</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Saat, tam 02:00’yi (14:00) göstermekte.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Miscellaneous">
+            <Name>FacePaint</Name>
+            <Type>Minigame</Type>
+            <ID>1</ID>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>First Time</Name>
+          <Type>DialogBranch</Type>
+          <ID>7</ID>
+          <IDCounter>1</IDCounter>
+          <ClusterName>Kings painting</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Mağdurun oturuşu, kralın tablosundaki pozla birebir aynı…</s>
+              <s>Yoksa kendi ölümünü mü önceden haber verdi?</s>
+              <s>Yahut bütün bu tablolar, cinayetle mi bağlantılı?</s>
+            </Sentences>
           </Instruction>
         </Branch>
       </BranchCluster>
