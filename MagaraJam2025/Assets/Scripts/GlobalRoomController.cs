@@ -46,6 +46,7 @@ public class GlobalRoomController : MonoBehaviour
         {
             if (room.roomName == roomName)
             {
+                room.gameObject.SetActive(true);
                 room.OpenRoom();
                 currentRoom = room;
                 RoomCameraButtons[0].SetButtonActive(true);
@@ -69,11 +70,13 @@ public class GlobalRoomController : MonoBehaviour
     {
         if(currentRoom.roomName == RoomName.ArtistRoom)
         {
+            currentRoom.gameObject.SetActive(false);
             OpenRoom(RoomName.GalleryRoom);
             ChangeRoomButton.GetComponentInChildren<TextMeshProUGUI>().text = "Odaya Git";
         }
         else if(currentRoom.roomName == RoomName.GalleryRoom)
         {
+            currentRoom.gameObject.SetActive(false);
             OpenRoom(RoomName.ArtistRoom);
             ChangeRoomButton.GetComponentInChildren<TextMeshProUGUI>().text = "Galeriye Git";
 

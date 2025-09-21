@@ -6,12 +6,16 @@ public class RoomController : MonoBehaviour
     public Camera[] cameras;
 
     public Camera CurrentCamera;
+    public PlaceSO placeSO;
+
+    private Place place;
     public void Init()
     {
         foreach (var cam in cameras)
         {
             cam.enabled = false;
         }
+        place = new Place(placeSO);
     }
 
 
@@ -19,5 +23,6 @@ public class RoomController : MonoBehaviour
     {
         cameras[0].enabled = true;
         CurrentCamera = cameras[0];
+        place.CheckDialogToTrigger();
     }
 }

@@ -18,4 +18,6 @@ public enum ClueName
     [DisplayName("Woman Painting Liked")] Woman_Painting_Liked,
     [DisplayName("Framer Alibi")] Framer_Alibi,
     [DisplayName("Framer Heard Nothing")] Framer_Heard_Nothing,
+    [DisplayName("Owner Dont Care")] Owner_Dont_Care,
+    [DisplayName("Name of First Painting")] Name_Of_First_Painting,
 }

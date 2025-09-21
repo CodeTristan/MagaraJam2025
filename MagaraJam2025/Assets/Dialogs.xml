@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <File xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <IDCounter>1</IDCounter>
+  <IDCounter>2</IDCounter>
   <InnerFiles>
     <Name>Cluster #1</Name>
     <File>
@@ -328,11 +328,6 @@
               <s>Saat, tam 02:00’yi (14:00) göstermekte.</s>
             </Sentences>
           </Instruction>
-          <Instruction xsi:type="Miscellaneous">
-            <Name>FacePaint</Name>
-            <Type>Minigame</Type>
-            <ID>1</ID>
-          </Instruction>
         </Branch>
         <Branch>
           <Name>First Time</Name>
@@ -349,11 +344,794 @@
             <Animation />
             <Voice />
             <Sentences>
-              <s>Mağdurun oturuşu, kralın tablosundaki pozla birebir aynı…</s>
+              <s>Cesedin duruşu, kralın tablosundaki pozla birebir aynı…</s>
               <s>Yoksa kendi ölümünü mü önceden haber verdi?</s>
               <s>Yahut bütün bu tablolar, cinayetle mi bağlantılı?</s>
             </Sentences>
           </Instruction>
+        </Branch>
+      </BranchCluster>
+    </File>
+    <File>
+      <FileName>Gallery</FileName>
+      <ClusterName>Cluster #1</ClusterName>
+      <IDCounter>10</IDCounter>
+      <BranchCluster>
+        <Name>Cluster #1</Name>
+        <Branch>
+          <Name>Peter Start</Name>
+          <Type>DialogBranch</Type>
+          <ID>0</ID>
+          <IDCounter>14</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>Peter Morrington</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Bay Martin’e ne oldu efendim? (Endişeli ve ter içinde)</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>1</Name>
+            <Type>ChoiceBody</Type>
+            <ID>6</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Sen Kimsin?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>1/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Peter Morrington</Name>
+            <Type>Dialog</Type>
+            <ID>2</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>B-b-ben mi? Ben Peter Morrington. Bay Martin’in çırağıyım. Son üç 
+yıldır onun yanında çalışıyorum.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>3</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Bay Martin öldüğünde neredeydin? Neden geciktin?</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Peter Morrington</Name>
+            <Type>Dialog</Type>
+            <ID>4</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Ö-özür dilerim… Yemin ederim hiçbir şey bilmiyorum. Midem 
+rahatsızdı.</s>
+              <s>Hep tuvaletteydim, saatlerdir sık sık gidip geliyorum. 
+Yediğim bir şey dokunmuş olmalı.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>2</Name>
+            <Type>ChoiceBody</Type>
+            <ID>8</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Bay Martin ile arandaki münasebet nasıldı?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>2/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Peter Morrington</Name>
+            <Type>Dialog</Type>
+            <ID>10</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Bay Martin’in işlerini takip eder, ondan resim sanatını öğrenirdim.</s>
+              <s>Çalışma alanını temizler, ona içecek getirirdim. Çalışma odasına 
+karşı çok titizdi.</s>
+              <s>Ona hürmetim sonsuz, kendisi büyük bir ressamdı. Evet, bazen beni azarlardı ama ona asla zarar vermem.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="JumpBranchInstruction">
+            <Type>JumpBranchInstruction</Type>
+            <ID>13</ID>
+            <FileName>Gallery</FileName>
+            <BranchName>Lady Questions</BranchName>
+            <Return>false</Return>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Lady Questions</Name>
+          <Type>DialogBranch</Type>
+          <ID>1</ID>
+          <IDCounter>13</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>Mallory Umbridge</Name>
+            <Type>Dialog</Type>
+            <ID>2</ID>
+            <Expression />
+            <Animation />
+            <Voice>NONE</Voice>
+            <Sentences>
+              <s>Benim adım Leydi Mallory Umbridge. Bay Martin’e ne oldu 
+efendim?</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>3</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Henüz araştırmaktayım, leydim. Suç işlendiğinde 
+neredeydiniz?</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>1</Name>
+            <Type>ChoiceBody</Type>
+            <ID>0</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Kimsiniz?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>1/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Mallory Umbridge</Name>
+            <Type>Dialog</Type>
+            <ID>4</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Şey… Çoğunlukla koridorda ve galeride dinleniyordum.</s>
+              <s>Bir süreliğine tuvalete uğradım, sonra tekrar odaya döndüm.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>6</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Yani ona modellik yapıyor, sonra bir saat kadar ara verip geri döndüğünüzde onu ölü buluyorsunuz, öyle mi?</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Mallory Umbridge</Name>
+            <Type>Dialog</Type>
+            <ID>7</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Evet efendim. Ne yapacağımı bilemedim, bu yüzden çığlık attım.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>3</Name>
+            <Type>ChoiceBody</Type>
+            <ID>1</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Bay Martin ile münasebetiniz nasıldı?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>3/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Mallory Umbridge</Name>
+            <Type>Dialog</Type>
+            <ID>9</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Yaklaşık bir yıldır modellik ediyorum.</s>
+              <s>Başta yalnızca kendi portremi yaptırmak istemiştim; fakat Bay Davis ve Bay Martin resmimi o kadar beğendiler ki, sık sık modellik yapmamı talep ettiler.</s>
+              <s>Onun sanatına hayranım. Kibar ve nazik bir insandı. Böylesine iyi yürekli bir beyefendiyle daha evvel hiç karşılaşmadım.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="JumpBranchInstruction">
+            <Type>JumpBranchInstruction</Type>
+            <ID>12</ID>
+            <FileName>Gallery</FileName>
+            <BranchName>Framer Questions</BranchName>
+            <Return>false</Return>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Framer Questions</Name>
+          <Type>DialogBranch</Type>
+          <ID>2</ID>
+          <IDCounter>19</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>Morris Sinclair</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Bu iş uzun sürecek mi? Ailemin yanına gidip onlara bu felaketi haber vermem gerekiyor.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>1</Name>
+            <Type>ChoiceBody</Type>
+            <ID>3</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Kimsiniz?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>1/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Morris Sinclair</Name>
+            <Type>Dialog</Type>
+            <ID>5</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Ben Morris Sinclair. Martin benim kardeşimdir. Bu galeride onun tablolarına ve Bay Davis’in satın aldıklarına çerçeve yaparım.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>2</Name>
+            <Type>ChoiceBody</Type>
+            <ID>6</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Suç işlendiğinde neredeydiniz?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>2/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Morris Sinclair</Name>
+            <Type>Dialog</Type>
+            <ID>8</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Kendi odamda yeni bir çerçeve üzerinde çalışıyordum. </s>
+              <s>Oyma işine o kadar dalmıştım ki zamanın nasıl geçtiğini fark etmedim.</s>
+              <s>Bu sabah öteki odada insanların yüksek sesle konuştuğunu, neredeyse kavga ettiğini duydum ama ne hakkında olduğunu bilemiyorum.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>3</Name>
+            <Type>ChoiceBody</Type>
+            <ID>10</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Cinayet işlenirken herhangi bir şey işittiniz mi?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>3/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Morris Sinclair</Name>
+            <Type>Dialog</Type>
+            <ID>12</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>O sırada muhtemelen ahşabı testereyle kesiyordum, bu yüzden hiçbir şey duymadım.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>4</Name>
+            <Type>ChoiceBody</Type>
+            <ID>14</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Bay Martin ile münasebetiniz nasıldı?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>4/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Morris Sinclair</Name>
+            <Type>Dialog</Type>
+            <ID>16</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>O benim kardeşim, birlikte çalışırdık. Elbette bazen aramızda anlaşmazlıklar olurdu ama nihayetinde kan bağı her şeyden güçlüdür, değil mi?</s>
+              <s>Özür dilerim… Belki de bunu söylemek için doğru zaman değil.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="JumpBranchInstruction">
+            <Type>JumpBranchInstruction</Type>
+            <ID>18</ID>
+            <FileName>Gallery</FileName>
+            <BranchName>Owner Questions</BranchName>
+            <Return>false</Return>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Owner Questions</Name>
+          <Type>DialogBranch</Type>
+          <ID>3</ID>
+          <IDCounter>17</IDCounter>
+          <ClusterName>Cluster #1</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>David Collingwood</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Bay Dedektif, hakkınızda çok şey duydum. Sizi galerimde ağırlamak ne büyük şeref… </s>
+              <s>Her ne kadar şartlar hoş olmasa da, yine de bir onur.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>1</Name>
+            <Type>ChoiceBody</Type>
+            <ID>1</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Kimsiniz?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>1/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>David Collingwood</Name>
+            <Type>Dialog</Type>
+            <ID>3</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Efendim, ismim zaten galeriye adım attığınızda karşınıza çıkar. Ben David Collingwood. Bu galerinin sahibiyim.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>4</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Pek üzgün görünmüyorsunuz.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>David Collingwood</Name>
+            <Type>Dialog</Type>
+            <ID>5</ID>
+            <Expression />
+            <Animation />
+            <Voice>NONE</Voice>
+            <Sentences>
+              <s>Ne! Elbette üzgünüm. Martin benim en sevdiğim ressamdı; gerçi bazen eserlerini bitirmesi pek uzun sürerdi.</s>
+              <s>Şimdi sanat işlerimi üstlenecek başka bir ressam bulmam gerekecek.</s>
+              <s>Ama ben bardağın dolu tarafına bakarım; yaptığı tablolar artık, böylesine ilginç bir ölümle birlikte, çok daha kıymetli hale geldi.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>2</Name>
+            <Type>ChoiceBody</Type>
+            <ID>7</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Suç işlendiğinde neredeydiniz?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>2/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>David Collingwood</Name>
+            <Type>Dialog</Type>
+            <ID>9</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Kendi odamdaydım, işime bakıyordum. Hepsi bu. Odamdan hiç çıkmadım. </s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="ChoiceBody">
+            <Name>4</Name>
+            <Type>ChoiceBody</Type>
+            <ID>10</ID>
+            <DialogText />
+            <IsLoop>false</IsLoop>
+            <Choice>
+              <ChoiceText>Bay Martin ile münasebetiniz nasıldı?</ChoiceText>
+              <IsSelectable>true</IsSelectable>
+              <hasSelected>false</hasSelected>
+              <isSelectable>true</isSelectable>
+              <Branch>
+                <Name>4/0</Name>
+                <Type>DialogBranch</Type>
+                <ID>0</ID>
+                <IDCounter>0</IDCounter>
+                <IsStartBranch>false</IsStartBranch>
+              </Branch>
+            </Choice>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>David Collingwood</Name>
+            <Type>Dialog</Type>
+            <ID>12</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Ben ona ücret öderim, o da benim için çalışır. Daha ne beklenir? </s>
+              <s>Gerçi tabloların sergilenmesi konusunda fazlasıyla titizdir, sık sık bana karşı çıkar.</s>
+              <s>Buna rağmen, eserleri benim için çok kıymetlidir.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>13</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>(Bu sözler, Martin’in tablolarının sergilenme biçimi konusunda özel bir hassasiyeti olduğunu gösteriyor. Belki de tablolar cinayetle bağlantılıdır.)</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>David Collingwood</Name>
+            <Type>Dialog</Type>
+            <ID>14</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>&lt;i&gt;(Bağırır)&lt;/i&gt; HAYIIIR! Kim bozdu benim tablomuu!</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>NONE</Name>
+            <Type>Dialog</Type>
+            <ID>15</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Artık tabloları inceleyebilirsin.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>16</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>İlk cinayet bir tabloyla ilişkiliydi… Belki bunlar da bana daha fazla ipucu verebilir.</s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+      </BranchCluster>
+      <BranchCluster>
+        <Name>Cluster #2</Name>
+        <Branch>
+          <Name>Yırtık</Name>
+          <Type>DialogBranch</Type>
+          <ID>4</ID>
+          <IDCounter>2</IDCounter>
+          <ClusterName>Cluster #2</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>NONE</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Birisi tabloyu, Bay Martin’in öleceği şekilde bozmuş.</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Miscellaneous">
+            <Name>Yırtık</Name>
+            <Type>Minigame</Type>
+            <ID>1</ID>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Frame</Name>
+          <Type>DialogBranch</Type>
+          <ID>5</ID>
+          <IDCounter>1</IDCounter>
+          <ClusterName>Cluster #2</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>NONE</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression>NONE</Expression>
+            <Animation>NONE</Animation>
+            <Voice>NONE</Voice>
+            <Sentences />
+          </Instruction>
+        </Branch>
+      </BranchCluster>
+      <BranchCluster>
+        <Name>Self portrait</Name>
+        <Branch>
+          <Name>Name of The Painting</Name>
+          <Type>DialogBranch</Type>
+          <ID>6</ID>
+          <IDCounter>4</IDCounter>
+          <ClusterName>Cluster #3</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Morris, bu tablonun neden böyle isimlendirildiği hakkında bir fikrin var mı?</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Morris Sinclair</Name>
+            <Type>Dialog</Type>
+            <ID>1</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Ah sanırım... Kim sonsuza kadar yaşamak istemez ki ha?</s>
+              <s>Martin, kardeşim, kendisini sanatıyla ölümsüzleştirmek hakkında konuşup duruyordu zaten.</s>
+              <s>Başkaları materyalistik zevkler peşinde koşarken, be- o fırça darbeleri ile sonsuzluğu kazırdı.</s>
+              <s>Bu kanvas sadece bir resim değil, bir başkaldırı. Ölümün yüzüne gülüyor.</s>
+              <s>İnsanlar ölür, isimler yok olur, krallıklar çöker... ama bu? Bu sonsuza kadar yaşar.</s>
+              <s>Sadece "güzel" olduğu için değil. Vazodaki bir bitki de güzeldir.</s>
+              <s>Bu yaşar, çünkü kibir dolu. Ve kesinlikle yüzyıllar sonra, senin kemiklerin toz olduktan sonra bile, birileri fısıldayacak: "Sanatçı yaşadı."</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>2</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Bu adam çizim hakkında çok şey biliyor. Daha önce az kalsın "ben" mi dedi?</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Miscellaneous">
+            <Name>Name of First Painting</Name>
+            <Type>Minigame</Type>
+            <ID>3</ID>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Peter Coffee</Name>
+          <Type>DialogBranch</Type>
+          <ID>7</ID>
+          <IDCounter>2</IDCounter>
+          <ClusterName>Self portrait</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Kahveleri her zaman Peter hazırlıyor.</s>
+              <s>Bay David için de içecek hazırladın mı Peter?</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Peter Morrington</Name>
+            <Type>Dialog</Type>
+            <ID>1</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Elbette!.. &lt;i&gt;(kısık sesle)&lt;/i&gt; Gerçi bu benim iş tanımımda yoktu. </s>
+              <s>Ben Martin’in asistanıyım, Davis’in uşağı değil! Niye onun da işini yapmak zorundayım ki—</s>
+              <s>&lt;i&gt;(normal sesle)&lt;/i&gt; Ah! Yüksek mi söyledim?</s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+      </BranchCluster>
+      <BranchCluster>
+        <Name>Adam ve Kadın</Name>
+        <Branch>
+          <Name>Hair Tie</Name>
+          <Type>DialogBranch</Type>
+          <ID>8</ID>
+          <IDCounter>4</IDCounter>
+          <ClusterName>Adam ve Kadın</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
+          <Instruction xsi:type="Dialog">
+            <Name>MC</Name>
+            <Type>Dialog</Type>
+            <ID>0</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Bir saç tokası var ama Bayan Davis’in saçları kısa.</s>
+              <s>Leydi Mallory, buradaki saç tokası sizin tokanıza benziyor. Bunun hakkında bir şey biliyor musunuz?</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>Mallory Umbridge</Name>
+            <Type>Dialog</Type>
+            <ID>1</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Um...</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>David Collingwood</Name>
+            <Type>Dialog</Type>
+            <ID>2</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Bunun konuyla ne alakası var!</s>
+            </Sentences>
+          </Instruction>
+          <Instruction xsi:type="Dialog">
+            <Name>NONE</Name>
+            <Type>Dialog</Type>
+            <ID>3</ID>
+            <Expression />
+            <Animation />
+            <Voice />
+            <Sentences>
+              <s>Konuşma David'in araya girmesiyle kesildi.</s>
+            </Sentences>
+          </Instruction>
+        </Branch>
+        <Branch>
+          <Name>Brown Stain</Name>
+          <Type>DialogBranch</Type>
+          <ID>9</ID>
+          <IDCounter>1</IDCounter>
+          <ClusterName>Adam ve Kadın</ClusterName>
+          <IsStartBranch>false</IsStartBranch>
         </Branch>
       </BranchCluster>
     </File>

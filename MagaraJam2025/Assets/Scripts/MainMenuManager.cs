@@ -6,7 +6,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private GameObject creditsPanel;
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void OpenCredits()
