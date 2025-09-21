@@ -182,10 +182,10 @@ public class NotebookController : MonoBehaviour
     {
         switch (selectedClue1,selectedClue2)
         {
-            case (Clue c1, Clue c2) when ((c1.clueName == ClueName.Scar && c2.clueName == ClueName.FacePaint) || (c2.clueName == ClueName.Scar && c1.clueName == ClueName.FacePaint)):
-                AddClue(ClueName.Framer_is_Liar,false);
-                CreatedClueText.text = "Yeni ipucu oluþturuldu: " + AllClues.Find(x => x.clueName == ClueName.Framer_is_Liar).description;
-                break;
+            //case (Clue c1, Clue c2) when ((c1.clueName == ClueName.Scar && c2.clueName == ClueName.FacePaint) || (c2.clueName == ClueName.Scar && c1.clueName == ClueName.FacePaint)):
+            //    AddClue(ClueName.Framer_is_Liar,false);
+            //    CreatedClueText.text = "Yeni ipucu oluþturuldu: " + AllClues.Find(x => x.clueName == ClueName.Framer_is_Liar).description;
+            //    break;
             default:
                 ClearSelections();
                 CreatedClueText.text = "Bu ipuçlarý arasýnda bir baðlantý yok.";
